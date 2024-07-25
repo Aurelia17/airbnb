@@ -1,0 +1,22 @@
+<div class="container my-5 ">
+  <h1 class="text-center">Flats</h1>
+  <div class="row mt-5 justify-content-center">
+    <% @flats.each do |flat| %>
+      <div class="col-md-4">
+        <div class="card mb-5 mx-auto" style="width: 18rem;">
+          <img src="<%= flat['imageUrl'] %>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= flat['name'] %></h5>
+            <p class="card-text">L'appartement est idéalement situé à la longitude <%= flat['lng'] %> et à la lattitude <%= flat['lat'] %>.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Prix : <%= flat['price'] %> €</li>
+          </ul>
+          <div class="card-body text-center">
+            <a href="#" class="card-link btn btn-outline-primary">Louer cet appartement</a>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
